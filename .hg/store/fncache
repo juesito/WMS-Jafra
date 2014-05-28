@@ -1,0 +1,9 @@
+data/src/main/java/org/jafra/impl/ApplicationConfig.java.i
+data/src/main/java/org/jafra/interfases/ProductRepository.java.i
+data/src/main/resources/META-INF/persistence.xml.i
+data/pom.xml.i
+data/lib/unknown/binary/hibernate-jpamodelgen-1.3.0.Final/SNAPSHOT/hibernate-jpamodelgen-1.3.0.Final-SNAPSHOT.jar.i
+data/src/main/java/org/jafra/services/ProductService.java.i
+data/src/main/java/org/jafra/wms/WmsJafra.java.i
+data/src/main/java/org/jafra/entities/Product.java.i
+data/lib/unknown/binary/hibernate-jpamodelgen-1.3.0.Final/SNAPSHOT/hibernate-jpamodelgen-1.3.0.Final-SNAPSHOT.jar.d
