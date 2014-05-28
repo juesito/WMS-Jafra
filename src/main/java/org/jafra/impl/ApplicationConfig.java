@@ -50,10 +50,10 @@ public class ApplicationConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
-        dataSource.setUrl("jdbc:oracle:thin:@172.16.20.124:1521:adaiaqro");
-        dataSource.setUsername("ltrqro");
-        dataSource.setPassword("ltrqro");
+        dataSource.setDriverClassName("classDriver");
+        dataSource.setUrl("URL");
+        dataSource.setUsername("userId");
+        dataSource.setPassword("password");
         return dataSource;
     }
 
