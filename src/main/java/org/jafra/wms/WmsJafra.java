@@ -6,8 +6,6 @@
 package org.jafra.wms;
 
 import java.util.Iterator;
-import java.util.List;
-import javax.persistence.EntityManagerFactory;
 import org.jafra.entities.Product;
 import org.jafra.impl.ApplicationConfig;
 import org.jafra.interfases.ProductRepository;
@@ -21,7 +19,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class WmsJafra {
 
     static ProductRepository productRepository;
-    public static void main(String[] args) {
+    public static void mainTwo(String[] args) {
 
         ConfigurableApplicationContext ctx1 = SpringApplication.run(ApplicationConfig.class);
         productRepository =  ctx1.getBean(ProductRepository.class);

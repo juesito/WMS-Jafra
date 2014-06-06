@@ -11,11 +11,11 @@ import javax.sql.DataSource;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
-import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
@@ -29,6 +29,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableJpaRepositories(basePackages = "org.jafra.interfases")
 @EnableTransactionManagement
 @EnableAutoConfiguration
+@PropertySource("classpath:application.properties")
 public class ApplicationConfig {
 
     @Bean
@@ -38,6 +39,7 @@ public class ApplicationConfig {
         
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
+        //em.setDataSource(dataSourceAs400());
         //em.setPackagesToScan(new String[]{"org.jafra.interfases"});
         //em.setPackagesToScan("org.jafra.services");
         
@@ -50,10 +52,20 @@ public class ApplicationConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("classDriver");
-        dataSource.setUrl("URL");
-        dataSource.setUsername("userId");
-        dataSource.setPassword("password");
+        dataSource.setDriverClassName("db.driver");
+        dataSource.setUrl("db.url");
+        dataSource.setUsername("db.user");
+        dataSource.setPassword("db.password");
+        return dataSource;
+    }
+    
+    @Bean
+    public DataSource dataSourceAs400() {
+        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        dataSource.setDriverClassName("com.ibm.as400.access.AS400JDBCDriver");
+        dataSource.setUrl("jdbc:as400://172.16.20.136/?jdbcCompliantTruncation=false;prompt=false");
+        dataSource.setUsername("consulta");
+        dataSource.setPassword("consulta");
         return dataSource;
     }
 
