@@ -8,6 +8,7 @@ package org.jafra.ui;
 import org.jafra.ui.floorcontrol.S01;
 import org.jafra.ui.administration.Login;
 import java.awt.Dimension;
+import org.jafra.ui.floorcontrol.DevolucionLabel;
 
 /**
  *
@@ -95,6 +96,11 @@ public class main extends javax.swing.JFrame {
         jMenu3.setText("Devoluciones");
 
         jMenuItem2.setText("Etiqueta");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem2);
 
         jMenuItem3.setText("Generación S01");
@@ -143,6 +149,20 @@ public class main extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        // TODO add your handling code here:
+        DevolucionLabel devLabelWindow = new DevolucionLabel();
+        Dimension desktopSize = desktop.getSize();
+        Dimension jInternalFrameSize = devLabelWindow.getSize();
+        
+        int width = (desktopSize.width - jInternalFrameSize.width) / 2;
+        int height = (desktopSize.height - jInternalFrameSize.height) / 2;
+        devLabelWindow.setLocation(width, height);
+        
+        desktop.add(devLabelWindow);
+        devLabelWindow.show();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments

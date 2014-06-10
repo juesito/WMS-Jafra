@@ -52,13 +52,20 @@ public class ApplicationConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
+        /*
         dataSource.setDriverClassName("db.driver");
         dataSource.setUrl("db.url");
         dataSource.setUsername("db.user");
         dataSource.setPassword("db.password");
+        */
+        dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
+        dataSource.setUrl("jdbc:oracle:thin:@172.16.20.124:1521:adaiaqro");
+        dataSource.setUsername("adaiaqro");
+        dataSource.setPassword("adaiaqro");
         return dataSource;
     }
     
+    /*
     @Bean
     public DataSource dataSourceAs400() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -68,6 +75,7 @@ public class ApplicationConfig {
         dataSource.setPassword("consulta");
         return dataSource;
     }
+    */
 
     @Bean
     public PlatformTransactionManager transactionManager(EntityManagerFactory emf) {

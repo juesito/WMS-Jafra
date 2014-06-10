@@ -37,6 +37,11 @@ public class Product implements Serializable {
     public Product() {
     }
 
+    public Product(String itemId) {
+        this.itemId = itemId;
+    }
+
+    
     
     public Product(String itemId, String description) {
         this.itemId = itemId;
