@@ -196,6 +196,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="00361"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">
           <Properties>
@@ -203,6 +206,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1405201126"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
@@ -210,6 +216,10 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
@@ -217,6 +227,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel5">
           <Properties>
@@ -234,6 +247,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2065"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
@@ -252,10 +268,10 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="MIXTO"/>
-                <StringItem index="1" value="PRIMERO"/>
-                <StringItem index="2" value="SEGUNDO"/>
-                <StringItem index="3" value="TERCERO"/>
+                <StringItem index="0" value="PRIMERO"/>
+                <StringItem index="1" value="SEGUNDO"/>
+                <StringItem index="2" value="TERCERO"/>
+                <StringItem index="3" value="MIXTO"/>
               </StringArray>
             </Property>
           </Properties>
@@ -266,6 +282,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="OF227322"/>
+          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
           <Properties>
@@ -276,27 +295,27 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="21">
-                <StringItem index="0" value="ZEBRAQRO01"/>
-                <StringItem index="1" value="ZEBRAQRO02"/>
-                <StringItem index="2" value="ZEBRAQRO03"/>
-                <StringItem index="3" value="ZEBRAQRO04"/>
-                <StringItem index="4" value="ZEBRAQRO05"/>
-                <StringItem index="5" value="ZEBRAQRO06"/>
-                <StringItem index="6" value="ZEBRAQRO07"/>
-                <StringItem index="7" value="ZEBRAQRO08"/>
-                <StringItem index="8" value="ZEBRAQRO09"/>
-                <StringItem index="9" value="ZEBRAQRO10"/>
-                <StringItem index="10" value="ZEBRAQRO11"/>
-                <StringItem index="11" value="ZEBRAQRO12"/>
-                <StringItem index="12" value="ZEBRAQRO13"/>
-                <StringItem index="13" value="ZEBRAQRO14"/>
-                <StringItem index="14" value="ZEBRAQRO15"/>
-                <StringItem index="15" value="ZEBRAQRO16"/>
-                <StringItem index="16" value="ZEBRAQRO17"/>
+                <StringItem index="0" value="ZEBRAQRO17"/>
+                <StringItem index="1" value="ZEBRAQRO01"/>
+                <StringItem index="2" value="ZEBRAQRO02"/>
+                <StringItem index="3" value="ZEBRAQRO03"/>
+                <StringItem index="4" value="ZEBRAQRO04"/>
+                <StringItem index="5" value="ZEBRAQRO05"/>
+                <StringItem index="6" value="ZEBRAQRO06"/>
+                <StringItem index="7" value="ZEBRAQRO07"/>
+                <StringItem index="8" value="ZEBRAQRO08"/>
+                <StringItem index="9" value="ZEBRAQRO09"/>
+                <StringItem index="10" value="ZEBRAQRO10"/>
+                <StringItem index="11" value="ZEBRAQRO11"/>
+                <StringItem index="12" value="ZEBRAQRO12"/>
+                <StringItem index="13" value="ZEBRAQRO13"/>
+                <StringItem index="14" value="ZEBRAQRO14"/>
+                <StringItem index="15" value="ZEBRAQRO15"/>
+                <StringItem index="16" value="ZEBRAQRO16"/>
                 <StringItem index="17" value="ZEBRAQRO18"/>
                 <StringItem index="18" value="ZEBRAQRO19"/>
                 <StringItem index="19" value="ZEBRAQRO20"/>
-                <StringItem index="20" value=" "/>
+                <StringItem index="20" value=""/>
               </StringArray>
             </Property>
           </Properties>
@@ -307,6 +326,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTextField7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="1"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

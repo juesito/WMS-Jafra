@@ -16,6 +16,8 @@ public interface IDesign {
     public String _DEVOLUTION_TYPE = "DT";
     public String _RECEIVE_TYPE = "RT";
     public String _PLANT_TYPE = "PT";
+    public int firstPoint = 750;
+    public int increase = 40;
 
     public String _DEVOLUTION_TEMPLATE = "CT~~CD,~CC|~CT~\n"
             + "|XA~TA000~JSN|LT0|MNW|MTT|PON|PMN|LH0,0|JMA|PR2,2~SD22|JUS|LRN|CI0|XZ\n"
@@ -24,19 +26,23 @@ public interface IDesign {
             + "|PW812\n"
             + "|LL0609\n"
             + "|LS0\n"
-            + "|FT162,71|A0N,34,33|FH\\|FDv_code|FS\n"
-            + "|FT307,75|A0N,34,33|FH\\|FDv_description|FS\n"
-            + "|FT307,85|A0N,34,33|FH\\|FDv_lote|FS\n"
-            + "|FT307,95|A0N,34,33|FH\\|FDv_cantidad|FS\n"
-            + "|FT307,115|A0N,34,33|FH\\|FDv_nomina|FS\n"
-            + "|FT307,150|A0N,34,33|FH\\|FDv_OP|FS\n"
-            + "|FT307,175|A0N,34,33|FH\\|FDv_turno|FS\n"
-            + "|BY2,3,100|FT30,569|B3N,,Y,N\n"
+            + "|FT" + (firstPoint - 120) + ",450|A0R,90,90|FH\\|FDv_code|FS\n"            
+            + "|FT" + (firstPoint - 300) + ",250|A0R,80,80|FH\\|FDv_description|FS\n"
+            + "|FT" + (firstPoint - 200) + ",550|A0R,70,70|FH\\|FDv_lote|FS\n"
+            + "|FT" + (firstPoint - 400) + ",450|A0R,80,80|FH\\|FDv_cantidad|FS\n"
+            + "|FT" + (firstPoint - 500) + ",255|A0R,50,50|FH\\|FDv_nomina|FS\n"
+            + "|FT" + (firstPoint - 500) + ",520|A0R,50,50|FH\\|FDv_OP|FS\n"
+            + "|FT" + (firstPoint - 500) + ",960|A0R,50,50|FH\\|FDv_turno|FS\n"
+            + "|FO25,550|A0R,30,30|FH\\|FD(v_code)|FS\n"
+            + "|BY6,3,150|FT60,250|B3R,,Y,N\n"
             + "|FD>;v_barcode|FS\n"
-            + "|FT30,135|A0N,23,24|FH\\|FD_______________________________________________________________|FS\n"
-            + "|FT350,117|A0N,34,33|FH\\|FDCANTIDAD:|FS\n"
-            + "|FT30,85|A0N,34,33|FH\\|FDLOTE:|FS\n"
-            + "|FT30,115|A0N,34,33|FH\\|FDNOMINA:|FS\n"
+            + "|FT" + firstPoint + ",300|A0R,40,40|FH\\|FDJafra Manufacturing S.A. de C.V.|FS\n"
+            + "|FT" + firstPoint + ",1000|A0R,40,40|FH\\|FD2014/06/27|FS\n"
+            + "|FT" + (firstPoint - 400) + ",700|A0R,80,80|FH\\|FDPIEZAS|FS\n"
+            + "|FT" + (firstPoint - 200) + ",340|A0R,70,70|FH\\|FDLOTE:|FS\n"
+            + "|FT" + (firstPoint - 500) + ",70|A0R,50,50|FH\\|FDNOMINA:|FS\n"
+            + "|FT" + (firstPoint - 500) + ",450|A0R,50,50|FH\\|FDOP:|FS\n"
+            + "|FT" + (firstPoint - 500) + ",790|A0R,50,50|FH\\|FDTURNO:|FS\n"
             + "|PQv_numberlabels,0,1,Y|XZ\n";
 
     public String _RECEIVE_TEMPLATE = "CT~~CD,~CC|~CT~\n"

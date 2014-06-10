@@ -61,36 +61,51 @@ public class DevolucionLabel extends javax.swing.JInternalFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Etiquetas para devolución");
 
         jLabel1.setText("Codigo:");
 
+        jTextField1.setText("00361");
+
         jLabel2.setText("Lote:");
+
+        jTextField2.setText("1405201126");
 
         jLabel3.setText("Cantidad cajas:");
 
+        jTextField3.setText("1");
+        jTextField3.setToolTipText("");
+
         jLabel4.setText("Cantidad Etiquetas:");
+
+        jTextField4.setText("1");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setText("Descipción del producto");
 
         jLabel6.setText("Nomina:");
 
+        jTextField5.setText("2065");
+
         jLabel7.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel7.setText("Nombre Empleado");
 
         jLabel8.setText("Turno:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "MIXTO", "PRIMERO", "SEGUNDO", "TERCERO" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "PRIMERO", "SEGUNDO", "TERCERO", "MIXTO" }));
 
         jLabel9.setText("OP:");
 
+        jTextField6.setText("OF227322");
+
         jLabel10.setText("Impresora:");
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ZEBRAQRO01", "ZEBRAQRO02", "ZEBRAQRO03", "ZEBRAQRO04", "ZEBRAQRO05", "ZEBRAQRO06", "ZEBRAQRO07", "ZEBRAQRO08", "ZEBRAQRO09", "ZEBRAQRO10", "ZEBRAQRO11", "ZEBRAQRO12", "ZEBRAQRO13", "ZEBRAQRO14", "ZEBRAQRO15", "ZEBRAQRO16", "ZEBRAQRO17", "ZEBRAQRO18", "ZEBRAQRO19", "ZEBRAQRO20", " " }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "ZEBRAQRO17", "ZEBRAQRO01", "ZEBRAQRO02", "ZEBRAQRO03", "ZEBRAQRO04", "ZEBRAQRO05", "ZEBRAQRO06", "ZEBRAQRO07", "ZEBRAQRO08", "ZEBRAQRO09", "ZEBRAQRO10", "ZEBRAQRO11", "ZEBRAQRO12", "ZEBRAQRO13", "ZEBRAQRO14", "ZEBRAQRO15", "ZEBRAQRO16", "ZEBRAQRO18", "ZEBRAQRO19", "ZEBRAQRO20", "" }));
 
         jLabel11.setText("Cantidad piezas:");
+
+        jTextField7.setText("1");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -250,9 +265,9 @@ public class DevolucionLabel extends javax.swing.JInternalFrame {
         //product = service.getProductData(product.getItemId());
         product.setDescription("TUBE/CAP MOSTURIZING");
         String batch = jTextField2.getText().trim();
-        String employeeId = jTextField1.getText().trim();
+        String employeeId = jTextField5.getText().trim();
         String op = jTextField6.getText().trim();
-        String turnId = jComboBox2.getSelectedItem().toString();
+        String turnId = jComboBox1.getSelectedItem().toString();
         
         
         Label label = new Label(product.getItemId(), product.getDescription(), batch, employeeId,op,turnId,50.0);
