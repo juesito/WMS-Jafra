@@ -1,12 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package org.jafra.entities;
 
 import java.io.Serializable;
+
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,68 +10,125 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-
-/**
- *
- * @author Jesús Armando Garcia Quiñones - Jueser <jesus_quinonez@jafra.com.mx>
- */
-@Entity
+@Entity(name="Product")
 @Table(name="art")
-public class Product implements Serializable {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="artcod", unique=true, nullable=false)
-    private Long id;
-    
-    @Column(name="artref" , columnDefinition = "char")
+public  class Product implements Serializable {
+
+
+    @Column(name="artref",columnDefinition="char",length=16)
+    @Basic
     private String itemId;
-    
-    @Column(name="artdes", columnDefinition = "char")
+
+
+    @Column(name="NUMDIACALCAD",length=4)
+    @Basic
+    private int expireDay;
+
+
+    @Column(name="artdes",columnDefinition="char",length=40)
+    @Basic
     private String description;
 
-    public Product() {
+
+    @Column(name="artcod")
+    @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private Long id;
+
+
+    @Column(name="AGRTARART",columnDefinition="char",length=4)
+    @Basic
+    private String type;
+
+
+    @Column(name="unimin",columnDefinition="char",length=4)
+    @Basic
+    private String unitMeasure;
+
+
+    @Column(name="SITINI",columnDefinition="char",length=4)
+    @Basic
+    private String initialSituation;
+
+    public Product(){
+
     }
 
-    public Product(String itemId) {
+
+   public String getItemId() {
+        return this.itemId;
+    }
+
+
+  public void setItemId (String itemId) {
         this.itemId = itemId;
     }
 
-    
-    
-    public Product(String itemId, String description) {
-        this.itemId = itemId;
+
+
+   public int getExpireDay() {
+        return this.expireDay;
+    }
+
+
+  public void setExpireDay (int expireDay) {
+        this.expireDay = expireDay;
+    }
+
+
+
+   public String getDescription() {
+        return this.description;
+    }
+
+
+  public void setDescription (String description) {
         this.description = description;
-    }   
-
-    public Long getId() {
-        return id;
     }
 
-    public void setId(Long id) {
+
+
+   public Long getId() {
+        return this.id;
+    }
+
+
+  public void setId (Long id) {
         this.id = id;
     }
 
-    public String getItemId() {
-        return itemId;
+
+
+   public String getType() {
+        return this.type;
     }
 
-    public void setItemId(String itemId) {
-        this.itemId = itemId;
+
+  public void setType (String type) {
+        this.type = type;
     }
 
-    public String getDescription() {
-        return description;
+
+
+   public String getUnitMeasure() {
+        return this.unitMeasure;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+
+  public void setUnitMeasure (String unitMeasure) {
+        this.unitMeasure = unitMeasure;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" + "id=" + id + ", itemId=" + itemId + ", description=" + description + '}';
+
+
+   public String getInitialSituation() {
+        return this.initialSituation;
     }
-    
-    
+
+
+  public void setInitialSituation (String initialSituation) {
+        this.initialSituation = initialSituation;
+    }
+
 }
+

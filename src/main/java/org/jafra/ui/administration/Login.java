@@ -6,17 +6,27 @@
 
 package org.jafra.ui.administration;
 
+import javax.swing.JOptionPane;
+import org.jafra.entities.Employee;
+import org.jafra.impl.ApplicationConfig;
+import org.jafra.repositories.EmployeeRepository;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ConfigurableApplicationContext;
+
 /**
  *
  * @author Jesús Armando Garcia Quiñones - Jueser <jesus_quinonez@jafra.com.mx>
  */
 public class Login extends javax.swing.JInternalFrame {
 
+    ConfigurableApplicationContext ctx1 = SpringApplication.run(ApplicationConfig.class);
+    private EmployeeRepository employeeRepository;
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        employeeRepository = ctx1.getBean("employeeRepository", EmployeeRepository.class);
     }
 
     /**
@@ -85,6 +95,11 @@ public class Login extends javax.swing.JInternalFrame {
         );
 
         jButton1.setText("Entrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Salir");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -128,6 +143,16 @@ public class Login extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
         this.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        Employee employee = employeeRepository.login(jTextField1.getText().trim(), jTextField2.getText().trim());
+        if(employee != null){
+            JOptionPane.showMessageDialog(null, "Bienvenido, " + employee.getUserName());
+        }else{
+            JOptionPane.showMessageDialog(null, "No eres Bienvenido, Adios ");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

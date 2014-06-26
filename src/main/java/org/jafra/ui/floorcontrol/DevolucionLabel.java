@@ -3,14 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package org.jafra.ui.floorcontrol;
 
+import java.util.Iterator;
 import org.jafra.entities.Label;
 import org.jafra.entities.Product;
+import org.jafra.impl.ApplicationConfig;
 import org.jafra.impl.Design;
+import org.jafra.repositories.ProductRepository;
 import org.jafra.services.ProductService;
 import org.jafra.tools.Printer;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 /**
  *
@@ -18,13 +22,15 @@ import org.jafra.tools.Printer;
  */
 public class DevolucionLabel extends javax.swing.JInternalFrame {
 
-    private ProductService service;
+    ConfigurableApplicationContext ctx1 = SpringApplication.run(ApplicationConfig.class);
+    private ProductRepository productRepository;
+
     /**
      * Creates new form devolucion
      */
     public DevolucionLabel() {
         initComponents();
-        service = new ProductService();
+        productRepository = ctx1.getBean("productRepository", ProductRepository.class);
     }
 
     /**
@@ -261,16 +267,16 @@ public class DevolucionLabel extends javax.swing.JInternalFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        Product product = new Product(jTextField1.getText().trim());
-        //product = service.getProductData(product.getItemId());
-        product.setDescription("TUBE/CAP MOSTURIZING");
+        Product product = new Product(); 
+        product.setItemId(jTextField1.getText().trim());        
+        
+        product = productRepository.findByReference(product.getItemId().trim());        
         String batch = jTextField2.getText().trim();
         String employeeId = jTextField5.getText().trim();
         String op = jTextField6.getText().trim();
         String turnId = jComboBox1.getSelectedItem().toString();
-        
-        
-        Label label = new Label(product.getItemId(), product.getDescription(), batch, employeeId,op,turnId,50.0);
+
+        Label label = new Label(product.getItemId(), product.getDescription(), batch, employeeId, op, turnId, 50.0);
         Design design = new Design("DT", label, 1);
         design.create();
         Printer printer = new Printer(jComboBox2.getSelectedItem().toString());

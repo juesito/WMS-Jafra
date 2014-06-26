@@ -8,7 +8,7 @@ package org.jafra.wms;
 import java.util.Iterator;
 import org.jafra.entities.Product;
 import org.jafra.impl.ApplicationConfig;
-import org.jafra.interfases.ProductRepository;
+import org.jafra.repositories.ProductRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 

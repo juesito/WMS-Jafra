@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<jpa:entity-mappings persistenceUnitName="ProductUnit" id="_14038186540661" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm orm_2_1.xsd" xmlns:java="http://jcp.org/en/jsr/detail?id=270" xmlns:jpa="http://java.sun.com/xml/ns/persistence/orm" xmlns:ns4="http://nbmodeler.java.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <jpa:package>org.jafra.entities</jpa:package>
+    <jpa:schema>adaiaqro</jpa:schema>
+    <jpa:entity name="Product" class="Product" minimized="false" id="_1403818981079">
+        <jpa:table name="art"/>
+        <jpa:attributes>
+            <jpa:id name="id" attribute-type="Long" id="_140381898944480">
+                <jpa:column name="artcod" unique="false" nullable="true" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+                <jpa:generated-value strategy="IDENTITY"/>
+            </jpa:id>
+            <jpa:basic name="itemId" attribute-type="String" id="_140381899002781">
+                <jpa:column name="artref" unique="false" nullable="true" insertable="true" updatable="true" column-definition="char" length="16" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic name="description" attribute-type="String" id="_140381899059482">
+                <jpa:column name="artdes" unique="false" nullable="true" insertable="true" updatable="true" column-definition="char" length="40" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic name="unitMeasure" attribute-type="String" id="_140381928018685">
+                <jpa:column name="unimin" unique="false" nullable="true" insertable="true" updatable="true" column-definition="char" length="4" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic name="initialSituation" attribute-type="String" id="_140381928077086">
+                <jpa:column name="SITINI" unique="false" nullable="true" insertable="true" updatable="true" column-definition="char" length="4" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic name="type" attribute-type="String" id="_140381928133887">
+                <jpa:column name="AGRTARART" unique="false" nullable="true" insertable="true" updatable="true" column-definition="char" length="4" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic name="expireDay" attribute-type="int" id="_140381944025888">
+                <jpa:column name="NUMDIACALCAD" unique="false" nullable="true" insertable="true" updatable="true" length="4" precision="0" scale="0"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:entity class="Employee" minimized="false" id="_1403822018747">
+        <jpa:table name="OPERATOR"/>
+        <jpa:attributes>
+            <jpa:id name="id" attribute-type="Long" id="_1403822030589102">
+                <jpa:column name="id" unique="false" nullable="true" insertable="true" updatable="true" length="255" precision="0" scale="0"/>
+                <jpa:generated-value/>
+            </jpa:id>
+            <jpa:basic name="userName" attribute-type="String" id="_1403822033261103">
+                <jpa:column name="USERNAME" unique="false" nullable="true" insertable="true" updatable="true" column-definition="char" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic name="nick" attribute-type="String" id="_1403822033789104">
+                <jpa:column name="REFERENCE" unique="false" nullable="true" insertable="true" updatable="true" column-definition="char" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+            <jpa:basic name="password" attribute-type="String" id="_1403822034405105">
+                <jpa:column name="PASSWORD" unique="false" nullable="true" insertable="true" updatable="true" column-definition="char" length="255" precision="0" scale="0"/>
+            </jpa:basic>
+        </jpa:attributes>
+    </jpa:entity>
+    <jpa:diagram id="_14038186540672">
+        <plane elementRef="_14038186540661" id="_14038186540673_p">
+            <shape elementRef="_1403818981079" id="_1403818981079_gui">
+                <Bounds x="382.0" y="87.0" width="141.0" height="197.0"/>
+            </shape>
+            <shape elementRef="_1403822018747" id="_1403822018747_gui">
+                <Bounds x="95.0" y="117.0" width="151.0" height="134.0"/>
+            </shape>
+        </plane>
+    </jpa:diagram>
+</jpa:entity-mappings>
